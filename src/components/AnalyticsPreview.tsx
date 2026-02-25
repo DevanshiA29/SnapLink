@@ -14,30 +14,30 @@ export default function AnalyticsPreview() {
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <div className="space-y-6">
             <h2 className="text-4xl md:text-5xl font-bold text-white">
-              Track Every Click,
+              Insight into Your
               <br />
               <span className="bg-gradient-to-r from-pink-500 via-purple-500 to-blue-500 bg-clip-text text-transparent">
-                Grow Smarter
+                Technical Reach
               </span>
             </h2>
 
             <p className="text-xl text-white/60">
-              Get detailed insights with our powerful analytics dashboard.
-              Understand your audience and optimize your bio-link performance.
+              Go beyond simple clicks. Understand how your contributions and projects
+              are being discovered across the global developer ecosystem.
             </p>
 
             <div className="space-y-4">
               <div className="flex items-center gap-3">
                 <div className="w-2 h-2 rounded-full bg-gradient-to-r from-pink-500 to-purple-500" />
-                <span className="text-white/80">Real-time tracking</span>
+                <span className="text-white/80">Referral source tracking (GitHub, StackOverflow)</span>
               </div>
               <div className="flex items-center gap-3">
                 <div className="w-2 h-2 rounded-full bg-gradient-to-r from-purple-500 to-blue-500" />
-                <span className="text-white/80">Detailed click analytics</span>
+                <span className="text-white/80">Project engagement metrics</span>
               </div>
               <div className="flex items-center gap-3">
                 <div className="w-2 h-2 rounded-full bg-gradient-to-r from-blue-500 to-cyan-500" />
-                <span className="text-white/80">Geographic insights</span>
+                <span className="text-white/80">Global developer heatmap</span>
               </div>
             </div>
           </div>

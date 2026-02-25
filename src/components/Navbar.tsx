@@ -18,9 +18,6 @@ export default function Navbar() {
             Features
           </button>
           <button className="px-4 py-2 text-sm font-medium text-white/80 hover:text-white transition-colors">
-            Pricing
-          </button>
-          <button className="px-4 py-2 text-sm font-medium text-white/80 hover:text-white transition-colors">
             Sign In
           </button>
           <button className="px-6 py-2 rounded-full bg-gradient-to-r from-pink-500 via-purple-500 to-blue-500 text-white font-medium hover:shadow-lg hover:shadow-purple-500/50 transition-all">
