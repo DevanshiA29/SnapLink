@@ -1,73 +1,86 @@
-# React + TypeScript + Vite
+# 🔗 SnapLink — Smart Link Shortener + Analytics
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern, fast, and clean URL shortener that lets users create short links, manage them, and track performance with a sleek UI.  
+Built to feel like a real product, not a college assignment pretending to be one.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## ✨ Highlights
 
-## React Compiler
+- ✅ Shorten long URLs into clean shareable links
+- ✅ Custom aliases (optional)
+- ✅ Click tracking + basic analytics
+- ✅ Copy-to-clipboard + QR-friendly links
+- ✅ Responsive UI (mobile + desktop)
+- ✅ Built with production-style structure (CI/CD branch support)
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+---
 
-## Expanding the ESLint configuration
+## 🖼️ Screenshots
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+> Put your screenshots inside `./screenshots/` and update the file names below.
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+### Landing / Home
+![Home](./screenshots/home.png)
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+### Create Link Flow
+![Create](./screenshots/create.png)
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+### Dashboard / Analytics
+![Dashboard](./screenshots/dashboard.png)
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+---
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+## 🧠 How It Works (Simple Explanation)
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+1. User submits a long URL  
+2. Backend generates a unique short code (or uses custom alias)  
+3. Short link redirects instantly to the original URL  
+4. Each redirect increments click metrics (and can store metadata like timestamp/device later)
+
+---
+
+## 🧩 Tech Stack
+
+**Frontend**
+- React + TypeScript
+- TailwindCSS (or your UI styling approach)
+- Axios / Fetch for API calls
+
+**Backend**
+- Node.js + Express
+- Database: MongoDB (or whatever you used)
+- REST API architecture
+
+**DevOps (Optional / In-progress)**
+- CI/CD integration branch setup
+- GitHub workflows (if configured)
+
+---
+
+## 📦 Features (Detailed)
+
+### 🔹 Link Shortening
+- Converts long URLs into short links
+- Validates URL input to avoid broken redirects
+
+### 🔹 Link Management
+- View previously created links
+- Copy, share, and reuse easily
+
+### 🔹 Click Analytics
+- Tracks total clicks per link
+- Dashboard view for quick insights
+
+### 🔹 Clean UX
+- Minimal UI noise
+- Smooth interactions and quick feedback
+
+---
+
+## 🚀 Getting Started
+
+### 1) Clone the Repository
+```bash
+git clone https://github.com/<your-username>/SnapLink.git
+cd SnapLink
