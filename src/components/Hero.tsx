@@ -1,6 +1,10 @@
 import { ArrowRight, Sparkles } from 'lucide-react';
+import { useState } from 'react';
+import LinkModal from './LinkModal';
 
 export default function Hero() {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
   return (
     <section className="relative pt-32 pb-20 px-6 overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-br from-pink-500/10 via-purple-500/10 to-blue-500/10 blur-3xl" />
@@ -28,11 +32,16 @@ export default function Hero() {
           </p>
 
           <div className="flex flex-wrap justify-center gap-4">
-            <button className="group px-10 py-5 rounded-full bg-gradient-to-r from-pink-500 via-purple-500 to-blue-500 text-white font-semibold text-lg hover:shadow-2xl hover:shadow-purple-500/50 transition-all flex items-center gap-2">
+            <button
+              onClick={() => setIsModalOpen(true)}
+              className="group px-10 py-5 rounded-full bg-gradient-to-r from-pink-500 via-purple-500 to-blue-500 text-white font-semibold text-lg hover:shadow-2xl hover:shadow-purple-500/50 transition-all flex items-center gap-2"
+            >
               Build Your Link
               <ArrowRight className="w-6 h-6 group-hover:translate-x-1 transition-transform" />
             </button>
           </div>
+
+          <LinkModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
         </div>
       </div>
     </section>
