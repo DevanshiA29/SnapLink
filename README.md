@@ -85,5 +85,7 @@ Built to feel like a real product, not a college assignment pretending to be one
 
 ### 1) Clone the Repository
 ```bash
-git clone https://github.com/<your-username>/SnapLink.git
+git clone https://github.com/DevanshiA29/SnapLink.git
 cd SnapLink
+npm i
+npm run dev
