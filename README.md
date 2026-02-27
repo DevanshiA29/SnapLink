@@ -21,13 +21,16 @@ Built to feel like a real product, not a college assignment pretending to be one
 > Put your screenshots inside `./screenshots/` and update the file names below.
 
 ### Landing / Home
-![Home](./screenshots/home.png)
+![Home](./Assets/dashboard.png)
 
 ### Create Link Flow
-![Create](./screenshots/create.png)
+![Create](./Assets/generator.png)
 
 ### Dashboard / Analytics
-![Dashboard](./screenshots/dashboard.png)
+![Dashboard](./Assets/features.png)
+
+### Shareable output
+![Output](./Assets/output.png)
 
 ---
 
