@@ -4,6 +4,7 @@ import cors from 'cors';
 import dotenv from 'dotenv';
 import { nanoid } from 'nanoid';
 import { Link } from './models/Link.js';
+import { Feedback } from './models/Feedback.js';
 
 dotenv.config();
 
@@ -47,6 +48,28 @@ app.post('/api/links', async (req: Request, res: Response) => {
 
         await newLink.save();
         res.status(201).json(newLink);
+    } catch (err) {
+        console.error(err);
+        res.status(500).json({ error: 'Server error' });
+    }
+});
+
+app.post('/api/feedback', async (req: Request, res: Response) => {
+    try {
+        const { name, email, message } = req.body;
+
+        if (!name || !email || !message) {
+            return res.status(400).json({ error: 'All fields are required' });
+        }
+
+        const newFeedback = new Feedback({
+            name,
+            email,
+            message
+        });
+
+        await newFeedback.save();
+        res.status(201).json({ message: 'Feedback submitted successfully' });
     } catch (err) {
         console.error(err);
         res.status(500).json({ error: 'Server error' });

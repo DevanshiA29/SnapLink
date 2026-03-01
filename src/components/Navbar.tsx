@@ -1,6 +1,10 @@
-import { Link2 } from 'lucide-react';
+import React, { useState } from 'react';
+import { Link2, MessageSquare } from 'lucide-react';
+import FeedbackModal from './FeedbackModal';
 
 export default function Navbar() {
+  const [isFeedbackOpen, setIsFeedbackOpen] = useState(false);
+
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 px-6 py-4 backdrop-blur-md bg-white/5 border-b border-white/10">
       <div className="max-w-7xl mx-auto flex items-center justify-between">
@@ -17,6 +21,13 @@ export default function Navbar() {
           <button className="px-4 py-2 text-sm font-medium text-white/80 hover:text-white transition-colors">
             Features
           </button>
+          <button
+            onClick={() => setIsFeedbackOpen(true)}
+            className="flex items-center gap-2 px-4 py-2 text-sm font-medium text-white/80 hover:text-white transition-colors group"
+          >
+            <MessageSquare className="w-4 h-4 text-white/60 group-hover:text-white transition-colors" />
+            Feedback
+          </button>
           <button className="px-4 py-2 text-sm font-medium text-white/80 hover:text-white transition-colors">
             Sign In
           </button>
@@ -25,6 +36,7 @@ export default function Navbar() {
           </button>
         </div>
       </div>
+      <FeedbackModal isOpen={isFeedbackOpen} onClose={() => setIsFeedbackOpen(false)} />
     </nav>
   );
 }
